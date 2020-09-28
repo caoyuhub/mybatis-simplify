@@ -16,19 +16,19 @@ public @interface Column {
 
     /**
      * 数据库中的字段
-     * @return
+     * @return 字段名字
      */
     String name() default "";
 
     /**
      * 自定义查询 #key 数据库字段名  #value 查询时的值
-     * @return
+     * @return 自定义查询语句
      */
     String  custom() default "";
 
     /**
      * 在findAll的时候是否使用自定义查询
-     * @return
+     * @return 师傅使用自定义查询语句
      */
     boolean findAllCustom() default true;
 }

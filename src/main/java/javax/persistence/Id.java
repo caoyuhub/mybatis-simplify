@@ -46,11 +46,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * </pre>
  *
  * @see Column
- * @see GeneratedValue
- *
+ * @author caoyu
  * @since 1.0
  */
 @Target({METHOD, FIELD})
 @Retention(RUNTIME)
-
 public @interface Id {}

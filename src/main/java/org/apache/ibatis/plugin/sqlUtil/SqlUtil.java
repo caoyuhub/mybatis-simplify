@@ -31,10 +31,10 @@ public class SqlUtil {
 
     /**
      * 自动生成SQL
-     * @param annotation
-     * @param method
-     * @param typeClass
-     * @return
+     * @param annotation 注解对象
+     * @param method        方法
+     * @param typeClass class对象
+     * @return sql语句
      */
     public static String[] autoSql(Annotation annotation, Method method,Class typeClass) throws Exception {
        SqlAutoInfo sqlAutoInfo = null;
@@ -102,9 +102,9 @@ public class SqlUtil {
 
     /**
      * 获取新增的sql
-     * @param sqlAutoInfo
-     * @param method
-     * @return
+     * @param sqlAutoInfo   自动sql对象
+     * @param method        执行的方法
+     * @return              sql语句
      */
     private static String [] getInsertSql(SqlAutoInfo sqlAutoInfo,Method method) throws Exception {
         String methodName =  method.getName();
@@ -133,10 +133,10 @@ public class SqlUtil {
 
     /**
      * 获取删除的SQL
-     * @param sqlAutoInfo
-     * @param method
-     * @return
-     * @throws Exception
+     * @param sqlAutoInfo       自动sql对象
+     * @param method            执行的方法
+     * @return                  sql语句
+     * @throws Exception        所有错误
      */
     private static String [] getDeleteSql(SqlAutoInfo sqlAutoInfo,Method method) throws Exception {
 
@@ -157,10 +157,10 @@ public class SqlUtil {
 
     /**
      * 获取查询语句的sql
-     * @param sqlAutoInfo
-     * @param method
-     * @return
-     * @throws Exception
+     * @param sqlAutoInfo   自动sql对象
+     * @param method        执行的方法
+     * @return              SQL语句
+     * @throws Exception    所有错误
      */
     private static String[] getSelectSql(SqlAutoInfo sqlAutoInfo,Method method) throws Exception {
         //是否在最后加limit 1
@@ -215,10 +215,10 @@ public class SqlUtil {
 
     /**
      * 获取order by语句
-     * @param orderByString
-     * @param sqlAutoInfo
-     * @param method
-     * @return
+     * @param orderByString orderBy的字符串
+     * @param sqlAutoInfo   自动sql的信息对象
+     * @param method        执行的方法
+     * @return              sql
      */
     private static String getSqlOrderBy(String orderByString,SqlAutoInfo sqlAutoInfo,Method method){
 
@@ -267,11 +267,11 @@ public class SqlUtil {
 
     /**
      * 生成where语句
-     * @param whereName
-     * @param sqlAutoInfo
-     * @param method
-     * @return
-     * @throws Exception
+     * @param whereName         where的煮饭吃
+     * @param sqlAutoInfo       自动对象
+     * @param method            执行的方法
+     * @return                  sql
+     * @throws Exception        所有对象
      */
     private static String getSqlWhere(String whereName,SqlAutoInfo sqlAutoInfo,Method method) throws Exception {
         if(whereName == null || "".equals(whereName)){
@@ -365,9 +365,9 @@ public class SqlUtil {
 
     /**
      * 通过特定的字符串吧字符串分割为数组
-     * @param string
-     * @param divisionKey
-     * @return
+     * @param string        需要分割的做饭吃
+     * @param divisionKey   需要分割的关键字
+     * @return              分割后的数组
      */
     public static String [] division(String string ,String []divisionKey){
 
@@ -429,9 +429,9 @@ public class SqlUtil {
 
     /**
      * 获取实体类中的字段信息
-     * @param entityClass
-     * @return
-     * @throws Exception
+     * @param entityClass   实体类的class
+     * @return              自动sql的基本对象
+     * @throws Exception    所有错误
      */
     private static SqlAutoInfo getSqlAutoInfo(Class entityClass) throws Exception {
 

@@ -30,16 +30,8 @@ public @interface Table {
     /**
      * (Optional) The name of the table.
      * <p> Defaults to the entity name.
+     * @return 表名
      */
     String name() default "";
 
-    /** (Optional) The catalog of the table.
-     * <p> Defaults to the default catalog.
-     */
-    String catalog() default "";
-
-    /** (Optional) The schema of the table.
-     * <p> Defaults to the default schema for user.
-     */
-    String schema() default "";
 }

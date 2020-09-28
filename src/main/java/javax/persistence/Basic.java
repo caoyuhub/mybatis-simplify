@@ -65,6 +65,7 @@ public @interface Basic {
      * This is a hint and is disregarded for primitive types; it may
      * be used in schema generation.
      * If not specified, defaults to <code>true</code>.
+     * @return null
      */
     boolean optional() default true;
 }

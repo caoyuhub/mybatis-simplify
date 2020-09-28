@@ -4,7 +4,6 @@ package org.apache.ibatis.plugin.consts;
  * sql语句解析的常量
  *
  * @author 曹渝
- * @date 2020/7/15 12:21
  **/
 public class SqlAnalysisConst {
 
